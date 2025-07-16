@@ -1,6 +1,6 @@
 # Emailer Project
 
-lauch link : https://emailer-cyan.vercel.app
+Deployement link : https://emailer-cyan.vercel.app
 
 This project demonstrates how to use [EmailJS](https://www.emailjs.com/) to send emails directly from HTML and JavaScript without a backend server.
 
