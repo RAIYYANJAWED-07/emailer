@@ -1,0 +1,140 @@
+     :root {
+      --bg-color: #f0f4f8;
+      --text-color: #222;
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --input-bg: #fff;
+      --button-bg: #007bff;
+      --button-hover: #0056b3;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f5f5f5;
+      --card-bg: rgba(30, 30, 30, 0.9);
+      --input-bg: #1f1f1f;
+      --button-bg: #2196f3;
+      --button-hover: #0d8ae2;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--input-bg);
+      font-size: 15px;
+      color: var(--text-color);
+      transition: box-shadow 0.3s ease, background 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      box-shadow: 0 0 0 2px var(--button-bg);
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      background-color: var(--button-bg);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+    }
+
+    button:disabled {
+      background-color: #aaa;
+      cursor: not-allowed;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--button-bg);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--button-bg);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .success-message {
+      text-align: center;
+      color: green;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .error-message {
+      text-align: center;
+      color: red;
+      margin-top: 10px;
+      font-weight: bold;
+    }
